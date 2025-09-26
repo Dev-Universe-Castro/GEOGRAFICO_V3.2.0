@@ -1,0 +1,31 @@
+RODAR APLICAÇÃO GEOGRAFICO (Windows)
+-----------------------------------------
+SUPABASE:
+Criar conta e tabelas SETUP_SUPABASE
+
+LOCALHOST:
+python3 -m pip install flask gunicorn werkzeug pandas openpyxl psycopg2-binary sqlalchemy email-validator Flask-Migrate reportlab matplotlib pillow cloudflared psycopg2-binary python-dotenv supabase
+
+python3 test_supabase_connection.py
+
+python3 supabase_config.py
+
+python3 main.py
+-------------------------------------------
+
+CLOUDFLARE:
+winget install --id Cloudflare.cloudflared
+
+cloudflared login
+
+cloudflared tunnel create mapa (98aa3809-3f18-4145-9e4c-12d9b231ebc6)
+
+cloudflared tunnel route dns mapa ferticore-mapa.com.br
+
+cloudflared tunnel run --url http://localhost:5000 mapa (outro cmd)
+
+
+---------------------------------------------
+
+cloudflared tunnel run --url http://localhost:5000 meu-servidor-web
+
